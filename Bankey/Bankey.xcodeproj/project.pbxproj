@@ -14,6 +14,8 @@
 		1D8A13702CEB0BB3009E4C49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8A136F2CEB0BB3009E4C49 /* LoginView.swift */; };
 		1DB32BE82CEB333A00009E74 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BE72CEB333A00009E74 /* OnboardingContainerViewController.swift */; };
 		1DB32BEA2CEB3B7100009E74 /* OnboardingViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BE92CEB3B7100009E74 /* OnboardingViewContainer.swift */; };
+		1DB32BEC2CEB4FC500009E74 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BEB2CEB4FC500009E74 /* DummyViewController.swift */; };
+		1DB32BEF2CEB559D00009E74 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BEE2CEB559D00009E74 /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1D8A136F2CEB0BB3009E4C49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1DB32BE72CEB333A00009E74 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		1DB32BE92CEB3B7100009E74 /* OnboardingViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewContainer.swift; sourceTree = "<group>"; };
+		1DB32BEB2CEB4FC500009E74 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		1DB32BEE2CEB559D00009E74 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		1D8A13582CEB07C7009E4C49 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				1DB32BED2CEB558C00009E74 /* Utils */,
 				1D8A136D2CEB0B39009E4C49 /* Files */,
 				1DB32BE62CEB331500009E74 /* Onboarding */,
 				1D8A136E2CEB0B8E009E4C49 /* Login */,
@@ -81,6 +86,7 @@
 			children = (
 				1D8A135D2CEB07C7009E4C49 /* LoginViewController.swift */,
 				1D8A136F2CEB0BB3009E4C49 /* LoginView.swift */,
+				1DB32BEB2CEB4FC500009E74 /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -92,6 +98,14 @@
 				1DB32BE92CEB3B7100009E74 /* OnboardingViewContainer.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1DB32BED2CEB558C00009E74 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DB32BEE2CEB559D00009E74 /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8A13702CEB0BB3009E4C49 /* LoginView.swift in Sources */,
+				1DB32BEF2CEB559D00009E74 /* LocalState.swift in Sources */,
+				1DB32BEC2CEB4FC500009E74 /* DummyViewController.swift in Sources */,
 				1D8A135E2CEB07C7009E4C49 /* LoginViewController.swift in Sources */,
 				1D8A135A2CEB07C7009E4C49 /* AppDelegate.swift in Sources */,
 				1DB32BEA2CEB3B7100009E74 /* OnboardingViewContainer.swift in Sources */,

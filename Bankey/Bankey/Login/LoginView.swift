@@ -25,6 +25,16 @@ class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("Init(coder:) has not been implemented")
     }
+    
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        clearTextFields()
+    }
+    
+    private func clearTextFields() {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+    }
 }
 
 extension LoginView {
