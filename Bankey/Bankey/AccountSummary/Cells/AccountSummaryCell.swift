@@ -5,10 +5,28 @@
 //  Created by Dwarakanatha Reddy Poreddy on 18/11/24.
 //
 
-import Foundation
 import UIKit
+import Foundation
 
 class AccountSummaryCell: UITableViewCell {
+    
+    enum AccountType: String {
+        case Banking
+        case CreditCard
+        case Investment
+    }
+    
+    struct ViewModel {
+        let accountType: AccountType
+        let accountName: String
+        let balance: Decimal
+        
+        var balanceAsArgumentedString: NSAttributedString {
+            return CurrencyFormatter().makeAttributedCurrency(balance)
+        }
+    }
+    
+    let viewModel: ViewModel? = nil
     
     let typeLabel = UILabel()
     let underlineView = UIView()
@@ -111,5 +129,25 @@ extension AccountSummaryCell {
         rootString.append(centString)
         
         return rootString
+    }
+}
+
+extension AccountSummaryCell {
+    func configure(with vm: ViewModel) {
+        typeLabel.text = vm.accountType.rawValue
+        nameLabel.text = vm.accountName
+        balanceAmountLabel.attributedText = vm.balanceAsArgumentedString
+        
+        switch vm.accountType {
+        case .Banking:
+            underlineView.backgroundColor = appColor
+            balanceLabel.text = "Current balance"
+        case .CreditCard:
+            underlineView.backgroundColor = .systemOrange
+            balanceLabel.text = "Balance"
+        case .Investment:
+            underlineView.backgroundColor = .systemPurple
+            balanceLabel.text = "Value"
+        }
     }
 }
