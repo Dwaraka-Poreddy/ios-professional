@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loginViewController.delegate = self
         onboardingContainerViewController.delegate = self
-          
+        
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = appColor
         
@@ -63,7 +63,6 @@ extension AppDelegate: LoginViewControllerDelegate {
         } else {
             setRootViewController(onboardingContainerViewController)
         }
-        
     }
 }
 
