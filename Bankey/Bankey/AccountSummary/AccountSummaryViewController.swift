@@ -29,19 +29,15 @@ class AccountSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setUpNavigationBar()
-    }
-    
-    func setUpNavigationBar() {
-        navigationItem.rightBarButtonItem = logoutBarButtonItem
     }
 }
 
 extension AccountSummaryViewController {
     func setup() {
+        setUpNavigationBar()
         setupTableView()
         setupTableHeaderView()
-        fetchDataAndLoadViews()
+        fetchData()
     }
     
     private func setupTableView() {
@@ -70,6 +66,10 @@ extension AccountSummaryViewController {
         headerView.frame.size = size
         
         tableView.tableHeaderView = headerView
+    }
+    
+    func setUpNavigationBar() {
+        navigationItem.rightBarButtonItem = logoutBarButtonItem
     }
 }
 
@@ -106,29 +106,39 @@ extension AccountSummaryViewController {
 
 // MARK: Networking
 extension AccountSummaryViewController {
-    private func fetchDataAndLoadViews() {
+    private func fetchData() {
+        let group = DispatchGroup()
         
-        fetchProfile(forUserId: "1") { result in
+        group.enter()
+       fetchProfile(forUserId: "1") { result in
             switch result {
             case .success(let profile):
                 self.profile = profile
                 self.configureTableheaderView(with: profile)
-                self.tableView.reloadData()
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            group.leave()
         }
         
+        group.enter()
         fetchAccounts(forUserId: "1") { result in
             switch result {
             case .success(let accounts):
                 self.accounts = accounts
                 self.configureTableCells(with: accounts)
-                self.tableView.reloadData()
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            group.leave()
         }
+        
+        group.notify(queue: .main) {
+            self.tableView.reloadData()
+        }
+        
     }
     private func configureTableheaderView(with profile: Profile) {
         let vm = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Morning",

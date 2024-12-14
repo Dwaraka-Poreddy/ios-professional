@@ -38,7 +38,6 @@ extension AccountSummaryViewController {
                       completion: @escaping (Result<Profile, NetworkError>) -> Void) {
         let url = URL(string: "https://fierce-retreat-36855.herokuapp.com/bankey/profile/\(userId)")!
         
-        
         URLSession.shared.dataTask(with: url) {data, response,
             error in
             DispatchQueue.main.async {
