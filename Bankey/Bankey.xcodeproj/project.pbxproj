@@ -16,6 +16,8 @@
 		1DA4EAD92D0DB66400C45D16 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4EAD82D0DB66400C45D16 /* ShakeyBellView.swift */; };
 		1DA4EADB2D0DC8A500C45D16 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4EADA2D0DC8A500C45D16 /* Date+Utils.swift */; };
 		1DA4EADD2D0DCBFE00C45D16 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4EADC2D0DCBFE00C45D16 /* AccountSummaryViewController+Networking.swift */; };
+		1DA4EAE12D0DF29B00C45D16 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4EAE02D0DF29B00C45D16 /* ProfileTests.swift */; };
+		1DA4EAE32D0DF61000C45D16 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4EAE22D0DF61000C45D16 /* AccountTests.swift */; };
 		1DB32BE82CEB333A00009E74 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BE72CEB333A00009E74 /* OnboardingContainerViewController.swift */; };
 		1DB32BEA2CEB3B7100009E74 /* OnboardingViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BE92CEB3B7100009E74 /* OnboardingViewContainer.swift */; };
 		1DB32BEC2CEB4FC500009E74 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB32BEB2CEB4FC500009E74 /* DummyViewController.swift */; };
@@ -54,6 +56,8 @@
 		1DA4EAD82D0DB66400C45D16 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		1DA4EADA2D0DC8A500C45D16 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		1DA4EADC2D0DCBFE00C45D16 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
+		1DA4EAE02D0DF29B00C45D16 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		1DA4EAE22D0DF61000C45D16 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		1DB32BE72CEB333A00009E74 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		1DB32BE92CEB3B7100009E74 /* OnboardingViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewContainer.swift; sourceTree = "<group>"; };
 		1DB32BEB2CEB4FC500009E74 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		1DA4EADE2D0DF27500C45D16 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DCC6A4F2CEF48F9006922C1 /* CurrencyFormatterTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1DA4EADF2D0DF28000C45D16 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				1DA4EAE02D0DF29B00C45D16 /* ProfileTests.swift */,
+				1DA4EAE22D0DF61000C45D16 /* AccountTests.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		1DB32BE62CEB331500009E74 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +225,8 @@
 		1DCC6A472CEF486D006922C1 /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				1DCC6A4F2CEF48F9006922C1 /* CurrencyFormatterTests.swift */,
+				1DA4EADF2D0DF28000C45D16 /* AccountSummary */,
+				1DA4EADE2D0DF27500C45D16 /* Utils */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -338,6 +360,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCC6A502CEF48F9006922C1 /* CurrencyFormatterTests.swift in Sources */,
+				1DA4EAE32D0DF61000C45D16 /* AccountTests.swift in Sources */,
+				1DA4EAE12D0DF29B00C45D16 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
