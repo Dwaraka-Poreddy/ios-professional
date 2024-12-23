@@ -28,6 +28,7 @@ extension ViewController {
         stackView.spacing = 30
         
         newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        newPasswordTextField.delegate = self
         
         statusView.translatesAutoresizingMaskIntoConstraints = false
         statusView.layer.cornerRadius = 5
@@ -57,3 +58,11 @@ extension ViewController {
     }
 }
 
+extension ViewController: PasswordTextFieldDelegate {
+    func editingChaged(_ sender: PasswordTextField) {
+        if sender === newPasswordTextField {
+            print(sender.textField.text ?? "")
+            statusView.updateDisplay(sender.textField.text ?? "")
+        }
+    }
+}
