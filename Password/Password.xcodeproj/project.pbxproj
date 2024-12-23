@@ -16,7 +16,20 @@
 		1D75D3562D109460001A55BE /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D75D3552D109460001A55BE /* PasswordStatusView.swift */; };
 		1DFC0B9A2D1922120038E5B8 /* PasswordCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC0B992D1922120038E5B8 /* PasswordCriteria.swift */; };
 		1DFC0B9D2D196FE20038E5B8 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC0B9C2D196FE20038E5B8 /* UIResponder+Utils.swift */; };
+		1DFC0BA52D19762A0038E5B8 /* PasswordCriteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC0BA42D19762A0038E5B8 /* PasswordCriteriaTests.swift */; };
+		1DFC0BAC2D1977C40038E5B8 /* PasswordStatusViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC0BAB2D1977C30038E5B8 /* PasswordStatusViewTests.swift */; };
+		1DFC0BAE2D197A380038E5B8 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC0BAD2D197A380038E5B8 /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DFC0BA62D19762A0038E5B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D75D3302D107CFD001A55BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D75D3372D107CFD001A55BE;
+			remoteInfo = Password;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D75D3382D107CFD001A55BE /* Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Password.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +43,21 @@
 		1D75D3552D109460001A55BE /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		1DFC0B992D1922120038E5B8 /* PasswordCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteria.swift; sourceTree = "<group>"; };
 		1DFC0B9C2D196FE20038E5B8 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
+		1DFC0BA22D19762A0038E5B8 /* PasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DFC0BA42D19762A0038E5B8 /* PasswordCriteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaTests.swift; sourceTree = "<group>"; };
+		1DFC0BAB2D1977C30038E5B8 /* PasswordStatusViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusViewTests.swift; sourceTree = "<group>"; };
+		1DFC0BAD2D197A380038E5B8 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1D75D3352D107CFD001A55BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DFC0B9F2D19762A0038E5B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				1D75D33A2D107CFD001A55BE /* Password */,
+				1DFC0BA32D19762A0038E5B8 /* PasswordTests */,
 				1D75D3392D107CFD001A55BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1D75D3382D107CFD001A55BE /* Password.app */,
+				1DFC0BA22D19762A0038E5B8 /* PasswordTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +126,16 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		1DFC0BA32D19762A0038E5B8 /* PasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DFC0BA42D19762A0038E5B8 /* PasswordCriteriaTests.swift */,
+				1DFC0BAB2D1977C30038E5B8 /* PasswordStatusViewTests.swift */,
+				1DFC0BAD2D197A380038E5B8 /* ViewControllerTests.swift */,
+			);
+			path = PasswordTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +156,24 @@
 			productReference = 1D75D3382D107CFD001A55BE /* Password.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1DFC0BA12D19762A0038E5B8 /* PasswordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DFC0BA82D19762A0038E5B8 /* Build configuration list for PBXNativeTarget "PasswordTests" */;
+			buildPhases = (
+				1DFC0B9E2D19762A0038E5B8 /* Sources */,
+				1DFC0B9F2D19762A0038E5B8 /* Frameworks */,
+				1DFC0BA02D19762A0038E5B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DFC0BA72D19762A0038E5B8 /* PBXTargetDependency */,
+			);
+			name = PasswordTests;
+			productName = PasswordTests;
+			productReference = 1DFC0BA22D19762A0038E5B8 /* PasswordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +186,10 @@
 				TargetAttributes = {
 					1D75D3372D107CFD001A55BE = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					1DFC0BA12D19762A0038E5B8 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 1D75D3372D107CFD001A55BE;
 					};
 				};
 			};
@@ -149,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				1D75D3372D107CFD001A55BE /* Password */,
+				1DFC0BA12D19762A0038E5B8 /* PasswordTests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +219,13 @@
 			files = (
 				1D75D3482D107CFF001A55BE /* LaunchScreen.storyboard in Resources */,
 				1D75D3452D107CFF001A55BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DFC0BA02D19762A0038E5B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +246,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DFC0B9E2D19762A0038E5B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DFC0BAE2D197A380038E5B8 /* ViewControllerTests.swift in Sources */,
+				1DFC0BA52D19762A0038E5B8 /* PasswordCriteriaTests.swift in Sources */,
+				1DFC0BAC2D1977C40038E5B8 /* PasswordStatusViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DFC0BA72D19762A0038E5B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D75D3372D107CFD001A55BE /* Password */;
+			targetProxy = 1DFC0BA62D19762A0038E5B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D75D3462D107CFF001A55BE /* LaunchScreen.storyboard */ = {
@@ -367,6 +451,42 @@
 			};
 			name = Release;
 		};
+		1DFC0BA92D19762A0038E5B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VR952BAJ56;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwarak.PasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Password.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Password";
+			};
+			name = Debug;
+		};
+		1DFC0BAA2D19762A0038E5B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VR952BAJ56;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dwarak.PasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Password.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Password";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -384,6 +504,15 @@
 			buildConfigurations = (
 				1D75D34D2D107CFF001A55BE /* Debug */,
 				1D75D34E2D107CFF001A55BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DFC0BA82D19762A0038E5B8 /* Build configuration list for PBXNativeTarget "PasswordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DFC0BA92D19762A0038E5B8 /* Debug */,
+				1DFC0BAA2D19762A0038E5B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
