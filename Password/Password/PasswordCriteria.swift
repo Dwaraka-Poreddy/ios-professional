@@ -20,7 +20,7 @@ struct PasswordCriteria {
         lengthCriteriaMet(text) && noSpaceCriteriaMet(text)
     }
     
-    static func upperCaseMet(_ text: String) -> Bool {
+    static func uppercaseMet(_ text: String) -> Bool {
         text.range(of: "[A-Z]+", options: .regularExpression) != nil
     }
     
@@ -33,6 +33,6 @@ struct PasswordCriteria {
     }
     
     static func specialCharacterMet(_ text: String) -> Bool {
-        text.range(of: "[@:?!()$#%^&*{},./|\\\\]+", options: .regularExpression) != nil
+        text.range(of: "[@:?!()$#,./\\\\]+", options: .regularExpression) != nil
     }
 }
